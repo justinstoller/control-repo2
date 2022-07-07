@@ -34,12 +34,12 @@ class foo(
 }
 
 notify { "A general notice": }
-include foo
 
 node default { }
 
 node /^(flaky)|(fusty).*/ {
   include profile::foo
+  include foo
 }
 
 node /^(tan)|(kinder).*/ {
